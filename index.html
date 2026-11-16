@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <!-- Bootstrap 3 CSS (Matches the classic Vertical basic form look) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap 3 JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- JsonPowerDB Commons Library -->
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Enrollment Form</h2>
+    <form id="studentForm" method="post">
+        <!-- Primary Key: Roll No -->
+        <div class="form-group">
+            <label for="rollNo">Roll No:</label>
+            <input type="text" class="form-control" id="rollNo" placeholder="Enter Roll No" onchange="getStudent()">
+        </div>
+
+        <!-- Full Name -->
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Enter Full Name" disabled>
+        </div>
+
+        <!-- Class -->
+        <div class="form-group">
+            <label for="studentClass">Class:</label>
+            <input type="text" class="form-control" id="studentClass" placeholder="Enter Class" disabled>
+        </div>
+
+        <!-- Birth Date -->
+        <div class="form-group">
+            <label for="birthDate">Birth Date:</label>
+            <input type="date" class="form-control" id="birthDate" disabled>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter Address" disabled>
+        </div>
+
+        <!-- Enrollment Date -->
+        <div class="form-group">
+            <label for="enrollmentDate">Enrollment Date:</label>
+            <input type="date" class="form-control" id="enrollmentDate" disabled>
+        </div>
+
+        <!-- Control Buttons -->
+        <button type="button" class="btn btn-primary" id="saveBtn" onclick="saveData()" disabled>Save</button>
+        <button type="button" class="btn btn-primary" id="updateBtn" onclick="updateData()" disabled>Update</button>
+        <button type="button" class="btn btn-primary" id="resetBtn" onclick="resetForm()" disabled>Reset</button>
+    </form>
+</div>
+
+<!-- External JavaScript File -->
+<script src="index.js"></script>
+
+</body>
+</html>
